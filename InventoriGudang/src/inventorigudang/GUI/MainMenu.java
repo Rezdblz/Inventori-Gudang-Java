@@ -31,9 +31,6 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         btnBarang = new javax.swing.JButton();
-        btnTransaksi = new javax.swing.JButton();
-        btnLokasi = new javax.swing.JButton();
-        btnSupplier = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -43,15 +40,6 @@ public class MainMenu extends javax.swing.JFrame {
 
         btnBarang.setText("Barang");
         btnBarang.addActionListener(this::btnBarangActionPerformed);
-
-        btnTransaksi.setText("Transaksi");
-        btnTransaksi.addActionListener(this::btnTransaksiActionPerformed);
-
-        btnLokasi.setText("Lokasi Barang");
-        btnLokasi.addActionListener(this::btnLokasiActionPerformed);
-
-        btnSupplier.setText("Supplier");
-        btnSupplier.addActionListener(this::btnSupplierActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -63,27 +51,17 @@ public class MainMenu extends javax.swing.JFrame {
                 .addContainerGap(97, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnSupplier, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnLokasi)
-                    .addComponent(btnTransaksi, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBarang, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(147, 147, 147))
+                .addComponent(btnBarang, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(146, 146, 146))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(btnBarang)
-                .addGap(18, 18, 18)
-                .addComponent(btnTransaksi)
-                .addGap(18, 18, 18)
-                .addComponent(btnLokasi)
-                .addGap(18, 18, 18)
-                .addComponent(btnSupplier)
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addContainerGap(183, Short.MAX_VALUE))
         );
 
         pack();
@@ -92,18 +70,6 @@ public class MainMenu extends javax.swing.JFrame {
     private void btnBarangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBarangActionPerformed
         new BarangForm().setVisible(true);
     }//GEN-LAST:event_btnBarangActionPerformed
-
-    private void btnLokasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLokasiActionPerformed
-        new LokasiForm().setVisible(true);
-    }//GEN-LAST:event_btnLokasiActionPerformed
-
-    private void btnSupplierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSupplierActionPerformed
-        new SupplierForm().setVisible(true);
-    }//GEN-LAST:event_btnSupplierActionPerformed
-
-    private void btnTransaksiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTransaksiActionPerformed
-        new TransaksiForm().setVisible(true);
-    }//GEN-LAST:event_btnTransaksiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -132,9 +98,6 @@ public class MainMenu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBarang;
-    private javax.swing.JButton btnLokasi;
-    private javax.swing.JButton btnSupplier;
-    private javax.swing.JButton btnTransaksi;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

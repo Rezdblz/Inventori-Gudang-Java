@@ -7,19 +7,15 @@
             <file>file:/D:/kuliah/oop/UAS/InventoriGudang/src/inventorigudang/Model/Barang.java</file>
             <file>file:/D:/kuliah/oop/UAS/InventoriGudang/src/inventorigudang/Model/Supplier.java</file>
             <file>file:/D:/kuliah/oop/UAS/InventoriGudang/src/inventorigudang/Model/Lokasi.java</file>
-            <file>file:/D:/kuliah/oop/UAS/InventoriGudang/src/inventorigudang/Model/Transaksi.java</file>
             <file>file:/D:/kuliah/oop/UAS/InventoriGudang/src/inventorigudang/Database/DBConnection.java</file>
             <file>file:/D:/kuliah/oop/UAS/InventoriGudang/src/inventorigudang/Database/DBAction.java</file>
             <file>file:/D:/kuliah/oop/UAS/InventoriGudang/src/inventorigudang/Database/BarangDAO.java</file>
             <file>file:/D:/kuliah/oop/UAS/InventoriGudang/src/inventorigudang/gudang/MainApp.java</file>
-            <file>file:/D:/kuliah/oop/UAS/InventoriGudang/src/inventorigudang/Database/TransaksiDAO.java</file>
             <file>file:/D:/kuliah/oop/UAS/InventoriGudang/src/inventorigudang/Database/LokasiDAO.java</file>
             <file>file:/D:/kuliah/oop/UAS/InventoriGudang/src/inventorigudang/Database/SupplierDAO.java</file>
             <file>file:/D:/kuliah/oop/UAS/InventoriGudang/src/inventorigudang/GUI/MainMenu.java</file>
             <file>file:/D:/kuliah/oop/UAS/InventoriGudang/src/inventorigudang/GUI/BarangForm.java</file>
-            <file>file:/D:/kuliah/oop/UAS/InventoriGudang/src/inventorigudang/GUI/SupplierForm.java</file>
-            <file>file:/D:/kuliah/oop/UAS/InventoriGudang/src/inventorigudang/GUI/TransaksiForm.java</file>
-            <file>file:/D:/kuliah/oop/UAS/InventoriGudang/src/inventorigudang/GUI/LokasiForm.java</file>
+            <file>file:/D:/kuliah/oop/UAS/InventoriGudang/src/inventorigudang/Database/DBMinimum.java</file>
         </group>
     </open-files>
 </project-private>

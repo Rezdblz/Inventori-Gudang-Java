@@ -11,59 +11,17 @@ import java.util.List;
  *
  * @author ASUS
  */
-public class LokasiDAO implements DBAction<Lokasi>{
-    private Connection conn;
-    
-    public LokasiDAO() {
-        this.conn=DBConnection.getConnection();
-    }
-    
-    @Override
-    public void insert(Lokasi item) {
-        String sql = "INSERT INTO lokasi (nama, deskripsi) VALUES (?, ?)";
-
-        try (PreparedStatement ps = conn.prepareStatement(sql)) {
-            ps.setString(1, item.getNama());
-            ps.setString(2, item.getDeskripsi());
-            ps.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Override
-    public void update(Lokasi item) {
-        String sql = "UPDATE lokasi SET nama = ?, deskripsi = ? WHERE id = ?";
-        try (PreparedStatement ps = conn.prepareStatement(sql)) {
-            ps.setString(1, item.getNama());
-            ps.setString(2, item.getDeskripsi());
-            ps.setInt(3, item.getId());
-            ps.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Override
-    public void delete(int id) {
-        String sql = "DELETE FROM lokasi WHERE id = ?";
-
-        try (PreparedStatement ps = conn.prepareStatement(sql)) {
-            ps.setInt(1, id);
-            ps.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
+public class LokasiDAO implements DBMinimum<Lokasi>{
+    private Connection conn=DBConnection.getConnection();
 
     @Override
     public Lokasi getById(int id) {
         String sql = "SELECT * FROM lokasi WHERE id = ?";
         Lokasi lokasi = null;
 
-        try (PreparedStatement ps = conn.prepareStatement(sql)) {
-            ps.setInt(1, id);
-            ResultSet result = ps.executeQuery();
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, id);
+            ResultSet result = stmt.executeQuery();
 
             if (result.next()) {
                 lokasi = new Lokasi(

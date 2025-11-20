@@ -10,8 +10,7 @@ import java.util.List;
  * @author ASUS
  * @param <T>
  */
-public interface DBAction<T> extends DBMinimum<T>{
-    void insert(T item);
-    void update(T item);
-    void delete(int id);
+public interface DBMinimum<T> {
+    T getById(int id);
+    List<T> getAll();
 }

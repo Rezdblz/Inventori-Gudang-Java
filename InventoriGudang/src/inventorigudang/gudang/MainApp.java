@@ -20,7 +20,6 @@ public class MainApp {
                 javax.swing.UIManager.getSystemLookAndFeelClassName());
         } catch (Exception e) {}
 
-        // Tampilkan form
         java.awt.EventQueue.invokeLater(() -> {
             new MainMenu().setVisible(true);
         });

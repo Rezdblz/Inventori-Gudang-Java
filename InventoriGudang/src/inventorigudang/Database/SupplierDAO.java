@@ -11,51 +11,8 @@ import java.util.List;
  *
  * @author ASUS
  */
-public class SupplierDAO implements DBAction<Supplier>{
-    private Connection conn;
-
-    public SupplierDAO() {
-        this.conn=DBConnection.getConnection();
-    }
-
-    @Override
-    public void insert(Supplier item) {
-        String sql = "INSERT INTO supplier (nama, alamat) VALUES (?, ?)";
-
-        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setString(1, item.getNama());
-            stmt.setString(2, item.getAlamat());
-            stmt.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Override
-    public void update(Supplier item) {
-        String sql = "UPDATE supplier SET nama = ?, alamat = ? WHERE id = ?";
-
-        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setString(1, item.getNama());
-            stmt.setString(2, item.getAlamat());
-            stmt.setInt(3, item.getId());
-            stmt.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Override
-    public void delete(int id) {
-        String sql = "DELETE FROM supplier WHERE id = ?";
-
-        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setInt(1, id);
-            stmt.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
+public class SupplierDAO implements DBMinimum<Supplier>{
+    private final Connection conn=DBConnection.getConnection();
 
     @Override
     public Supplier getById(int id) {
